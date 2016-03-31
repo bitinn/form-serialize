@@ -7,12 +7,14 @@
     "test": "test"
   },
   "devDependencies": {
+    "browserify": "^13.0.0",
     "domify": "~1.4.0",
     "zuul": "~3.10.1"
   },
   "scripts": {
     "test": "zuul -- test/index.js",
-    "test-local": "zuul --local -- test/index.js"
+    "test-local": "zuul --local -- test/index.js",
+    "dist": "browserify --standalone form-serialize index.js > dist.js"
   },
   "repository": {
     "type": "git",
